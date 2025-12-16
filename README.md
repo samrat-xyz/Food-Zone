@@ -7,5 +7,5 @@ This project is created for **learning Next.js**. In this project, I practiced v
 - Loading & Not Found Pages  
 - API Fetching (Frontend only)  
 - Component Structure  
-- Searching data 
+- Search query  
 
