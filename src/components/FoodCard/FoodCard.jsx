@@ -1,5 +1,6 @@
-// FoodCard.jsx
 import Link from "next/link";
+import CartBtn from "../Buttons/CartBtn";
+
 const FoodCard = ({ food }) => {
   const { id, title, foodImg, price, category } = food;
 
@@ -15,12 +16,16 @@ const FoodCard = ({ food }) => {
         <p className="text-sm text-gray-500">Category: {category}</p>
         <p className="font-bold mt-1">৳ {price}</p>
 
-        <Link
-          href={`/foods/${id}`}
-          className="inline-block mt-3 text-sm bg-sky-600 text-white px-4 py-2 rounded"
-        >
-          View Details
-        </Link>
+        <div className="flex gap-2 mt-3">
+          <Link
+            href={`/foods/${id}`}
+            className="inline-block text-sm bg-sky-600 text-white px-4 py-2 rounded"
+          >
+            View Details
+          </Link>
+
+          <CartBtn food={food}></CartBtn>
+        </div>
       </div>
     </div>
   );
